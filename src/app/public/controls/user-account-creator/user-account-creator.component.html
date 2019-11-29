@@ -1,0 +1,32 @@
+<div class="user-account-creator-container">
+	<form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+		<div class="info-holder">
+			
+			<input type="text" id="txtPhone" name="phone" placeholder="Phone Number" [(ngModel)]="model.phone" #phone="ngModel" [ngClass]="{ 'is-invalid': f.submitted && phone.invalid }" required minlength="10" maxlength="10"/>
+			<div *ngIf="f.submitted && phone.invalid" class="invalid-feedback">
+                <div *ngIf="phone.errors.required">Phone number is required</div>
+                <div *ngIf="phone.errors.minlength">Phone number must be 10 characters</div>
+            </div>
+			
+			<input type="text" id="txtName" name="name" placeholder="Name" [(ngModel)]="model.name" #name="ngModel" [ngClass]="{ 'is-invalid': f.submitted && name.invalid }" required/>
+			<div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+                <div *ngIf="name.errors.required">Name is required</div>
+            </div>
+            
+			<input type="text" id="txtEmail" name="email" placeholder="Email" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email/>
+			<div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                <div *ngIf="email.errors.required">Email is required</div>
+                <div *ngIf="email.errors.email">Email must be a valid email address</div>
+            </div>
+			
+			<input type="password" id="txtPassword" name="password" placeholder="Password" [(ngModel)]="model.password" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required minlength="6"/>
+			<div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+                 <div *ngIf="password.errors.required">Password is required</div>
+                 <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+             </div>
+		</div>
+		<div class="action-btn-holder">
+			<button class="action-btn">SUBMIT</button>
+		</div>
+	</form>
+</div>

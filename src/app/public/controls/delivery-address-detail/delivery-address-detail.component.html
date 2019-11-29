@@ -1,0 +1,45 @@
+<div class="delivery-address-creator-container">
+	
+	<span *ngIf="isDeliveryAddressAvailable === true; then showSelectedAddressPanel else addressSelectionPanel"></span>
+	<ng-template #showSelectedAddressPanel>
+		<div class="title-holder">
+			<h3><i class='fas fa-map-marker-alt' style='font-size:25px'></i> Selected Delivery Address</h3>
+			<div class="address-card">
+				<div class="select-card active"><div class="tick active"></div></div>
+				<div class="address-of">{{selectedAddress.addressType}}</div>
+				<div class="address-line-first">{{selectedAddress.street}}</div>
+				<div class="address-line-second">{{selectedAddress.area}}</div>
+				<div class="address-line-third">{{selectedAddress.state}} - <label class="pin">{{selectedAddress.pincode}}</label></div>
+				<div class="contact-line">Phone - <label class="phone-num">{{selectedAddress.phone}}</label></div>
+			</div>
+			<span>Change Address ? <label class="action-link" (click)="changeAddress()">Edit</label></span>
+		</div>
+
+	</ng-template>
+	
+	<ng-template #addressSelectionPanel>
+		<div class="title-holder">
+			<h3><i class='fas fa-map-marker-alt' style='font-size:25px'></i> Delivery Address</h3>
+			<span>Provide your address details for food delivery.</span>
+
+			<span *ngIf="savedAddress === true; then newAddressMsg  else saveAddressMsg"></span>
+			<ng-template #newAddressMsg><span>First Time Customer ? <label class="action-link" (click)="toggle()">Create New Address</label></span></ng-template>
+			<ng-template #saveAddressMsg><span>Already Have Address ? <label class="action-link" (click)="toggle()">Select Address</label></span></ng-template>
+		</div>
+		<span *ngIf="addressCardsAvailable === true; then addressCards else addressCreator"></span>
+		<ng-template #addressCards>
+			<app-address-cards></app-address-cards>
+		</ng-template>
+		<!--<span *ngIf="userAccCreatorVisible === true; then userAccTrue"></span>-->
+		<ng-template #addressCreator>
+			<app-delivery-address-creator></app-delivery-address-creator>
+		</ng-template>
+	</ng-template>
+	
+	<div class="task-complete">
+		<span *ngIf="checked === true; then checkTrue"></span>
+		<ng-template #checkTrue><span class="tick"></span></ng-template>
+	</div>
+		  
+	
+</div>

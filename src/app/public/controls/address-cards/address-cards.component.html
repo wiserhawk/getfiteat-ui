@@ -1,0 +1,20 @@
+<!--<div class="address-cards-container">-->
+    
+    <span *ngIf="addressCards.length === 0; then noAddressFoundMsg"></span>
+    <ng-template #noAddressFoundMsg><div class="message">Sorry, no saved address available for you.</div></ng-template>
+
+    <div *ngFor="let a of addressCards">
+        <div class="address-card" (click)="doCheck(a.addressNum)">
+            <span *ngIf="selectedAddressNumber === a.addressNum; then selectedCard"></span>
+            <ng-template #selectedCard><div class="select-card active"><div class="tick active">7</div></div></ng-template>
+            <div class="address-of">{{a.addressType}}</div>
+            <div class="address-line-first">{{a.street}}</div>
+            <div class="address-line-second">{{a.area}}</div>
+            <div class="address-line-third">{{a.state}} -<span class="pin">{{a.pincode}}</span></div>
+            <div class="contact-line">Phone -<span class="phone-num">{{a.phone}}</span></div>
+        </div>
+    </div>
+    <div class="action-btn-holder">
+        <button class="action-btn" (click)="selectAddressCard()">CONTINUE</button>
+    </div>
+<!--</div>-->

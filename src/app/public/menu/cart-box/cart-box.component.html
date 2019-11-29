@@ -1,0 +1,36 @@
+<!-- Start right cart box -->
+<div id="cartbox" class="cartnav">
+ <a href="javascript:void(0)" class="closebtn" onclick="closeCartBox()">&times;</a>
+ <label class="cart-header">YOUR CART</label>
+ <label class="cart-subheader">({{size}} items)</label>
+ 
+  <ul>
+	<li *ngFor = "let it of cartItems" id="{{it.itemId}}">
+		<div class="cart-item">
+			<div class="item-info">
+				<div class="item-type" >
+					<span *ngIf="it.type === 'VEG'; then veg else non_veg"></span>
+					<ng-template #veg><img src="assets/images/veg-small-icon.jpg" title="VEG" /></ng-template>
+					<ng-template #non_veg><img src="assets/images/non-veg-small-icon.png" title="NON-VEG" /></ng-template> 
+				</div>
+				<div class="item-text">{{it.itemName}}</div>
+			</div>
+			<div class="item-price-contols">
+				<div class="item-price">
+						<i class="fa fa-rupee"></i>{{it.netPrice}} 
+						<label><i class="fa fa-rupee"></i>{{it.price}}</label> 
+					
+				</div>
+				<div class="item-incrementer"> 
+					<app-minus-plus-counter [itemId] = "it.itemId" [name] = "it.itemName" [price] = "it.price" [netPrice] = "it.netPrice" [type] = "it.type" [quantity] = "it.quantity" ></app-minus-plus-counter>
+				</div>
+				<div class="item-delete"><img src="assets/images/close2.png" title="Delete" (click) = "deteleItemFromCart(it.itemId);"/></div>
+			</div>
+		</div>
+	</li>
+  </ul>
+  <span *ngIf="size > 0 then activeBtn else message"></span>
+  <ng-template #activeBtn><span class="checkout-button" onclick="location.href='checkout'">PLACE ORDER ( <i class="fa fa-rupee"></i>{{totalPrice}} )</span></ng-template>
+  <ng-template #message><div class="cart-msg">Please add some items in cart.</div></ng-template>
+</div>
+<!-- End right cart box -->

@@ -1,0 +1,24 @@
+<div class="modal-header">
+  <h4 class="modal-title">Check Availabitity Zone</h4>
+  <button type="button" class="close" aria-label="Close" title="Close" (click)="activeModal.dismiss('Cross click')">X</button>
+</div>
+
+
+<div class="availability-zone-container">
+  <div class="info-holder">
+    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+	
+      <input type="text" id="txtPincode" name="pincode" placeholder="PINCODE" (keydown)="cleanResponse()" [(ngModel)]="model.pincode" #pincode="ngModel" [ngClass]="{ 'is-invalid': f.submitted && pincode.invalid }" required minlength="6" maxlength="6"/>
+			<div *ngIf="f.submitted && pincode.invalid" class="invalid-feedback">
+          <div *ngIf="pincode.errors.required">Pincde number is required</div>
+          <div *ngIf="pincode.errors.minlength">Pincode number must be 6 characters</div>
+      </div>
+      <label #response >{{availabilityMsg}}</label>
+      <div class="action-btn-holder">
+        <button class="action-btn">CHECK</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+

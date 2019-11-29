@@ -1,0 +1,253 @@
+
+.meal-container {
+	width:80%;
+	height: auto;
+	margin: 50px auto;
+}
+
+.meal-img-panel {
+    #float: left;
+    width: 100%;
+	height: auto; 
+	padding: 20px 10px;
+}
+
+.meal-img-panel img {
+   #float: left;
+    width: 100%;
+}
+
+.meal-info-panel {
+    #float: left;
+    width: 100%;
+    height: auto;  
+}
+
+.meal-info {
+    float: left;
+    width: 100%;
+    height: auto; 
+    padding: 0 15px;
+}
+
+
+.rateit span{
+	height:18px;
+	width:76px;
+	
+	display:inline-block;
+}
+.rateit p {
+	font-size:1.2em;
+	font-weight:bold;
+	color:#777;	
+}
+.rateit p label{
+	font-size:0.8em;
+	font-weight:bold;
+	color:#aaa;
+	text-decoration:line-through;
+}
+
+.meal-basic-info label {
+	height:auto;
+	color: #555;
+	font-size: 1.3em;
+	font-weight: bold;
+	margin-bottom: 20px;
+	text-decoration:none;
+	display: block;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+	/*white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 75ch;*/
+}
+
+.meal-basic-info span a{
+	color:#777;
+	font-size:0.9em;
+	font-weight:bold;
+	text-transform:uppercase;
+    text-decoration: none;  
+   
+}
+.meal-basic-info span a label{
+	height:12px;
+	width:12px;
+	display:inline-block;
+	margin-right: 0.4em;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+    -o-transition:0.5s all;
+    
+}
+/* .post-basic-info span a:hover{
+	color:#B9CB41;
+} */
+.meal-basic-info p{
+	font-size: 0.875em;
+	color: #B7B5B5;
+	margin: 0.6em 0;
+	line-height: 1.5em;
+}
+/*--post-info-rate-share--*/
+.meal-info-rate {
+	#border-top: 1px solid rgba(183, 181, 181, 0.36);
+	padding: 1% 0 2%;
+	height: auto;
+}
+.rateit{
+	float:left;
+	margin: 0.18em 0 0 1em;
+}
+
+.cart-action-controls {
+	width: 40%;
+	float:right;
+	padding: 5% ;
+}
+
+.add-to-cart-btn{
+	float:right;
+	margin-right:1.5em;
+}
+
+.add-to-cart-btn span{
+	background:#d74a25;
+	height:20px;
+	width:auto;
+	text-align:center;
+	padding:3px 20px 3px 20px;
+	display:inline-block;
+	font-size:0.8em;
+	font-weight:bold;
+	color:#fff;
+	border-radius:30em;
+	cursor:pointer;
+	-webkit-border-radius:30em;
+	-moz-border-radius:30em;
+	-o-border-radius:30em;
+}
+.add-to-cart-btn span:hover{
+	background:#f09917;
+}
+
+
+
+
+.meal-details-panel {
+    float: left;
+    width: 100%;
+    height: auto;  
+    padding:0 20px;
+}
+
+
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    #border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    background-color: #ddd;
+    float: left;
+    #width: 100px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    margin: 0 3px;
+    color: #333;
+    transition: 0.3s;
+    transform: perspective(100px) rotateX(30deg);
+}
+
+.tab button span {
+    transform: perspective(100px) rotateX(0deg);;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+	background-color: #ccc;
+	color: #222;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #fefefe;
+    font-weight: bolder;
+    color: #222;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-top: none;
+	background: #fefefe;
+	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 0 10px 15px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+.tabcontent h3 {
+	font-size: 1.2em;
+	color: #555;
+}
+
+.tabcontent p {
+	font-size: 1em;
+	color: #777;
+}
+
+/*--media Quries for 640px-monitors-*/
+@media only screen and (max-width:640px) and (min-width:480px) {
+	.meal-container {
+		width:400px;
+	}
+	.meal-img-panel {
+		width: 400px;
+	}
+	.meal-info-panel {
+		width: 400px;	   
+	}
+}
+/*--media Quries for 480px-monitors-*/
+@media only screen and (max-width:480px) and (min-width:320px) {
+	.meal-container {
+		width:100%;
+	}
+	.meal-img-panel {
+		width: 100%;
+	}
+	.meal-info-panel {
+		width: 100%;	   
+	}
+}
+/*--media Quries for 320px-monitors-*/
+@media only screen and (max-width:320px) and (min-width:240px) {
+	.meal-container {
+		width:100%;
+	}
+	.meal-img-panel {
+		width: 100%;
+	}
+	.meal-info-panel {
+		width: 100%;	   
+	}
+}
+
+
+

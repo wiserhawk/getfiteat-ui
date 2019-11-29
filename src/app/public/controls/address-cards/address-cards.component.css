@@ -1,0 +1,116 @@
+.address-cards-container {
+    float:left;
+	width: 100%;
+	height:auto;
+	#margin: 50px 0 20px 50px;
+	border: 1px solid #ccc;
+	background: #fff;
+	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 10px 10px 15px 0 rgba(0, 0, 0, 0.19);
+}
+
+.message {
+    width: 100%;
+    padding: 100px 10px 50px 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.address-card {
+    float: left;
+    width: 300px;
+    margin: 10px 0 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px 10px;
+    font-size: 1em;
+    position: relative;
+    cursor: pointer;
+}
+
+.address-card:hover {
+    background-color: #eee;
+}
+
+.address-card.active {
+    border: 2px solid #999;
+}
+
+.select-card {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.select-card.active {
+    background-color:#e23703;
+}
+
+.tick {
+    display: none;
+}
+
+.tick.active {
+    position: absolute;
+    top: 1px;
+    right: 6px;
+    font-size: 1.1em;
+    color: #fff;
+    display: block; 
+    -webkit-transform: matrix(-1, 0, 0, 1, 0, 0) rotate(120deg);
+    -moz-transform: matrix(-1, 0, 0, 1, 0, 0) rotate(120deg);
+    -o-transform: matrix(-1, 0, 0, 1, 0, 0) rotate(120deg);
+    transform: matrix(-1, 0, 0, 1, 0, 0) rotate(120deg);
+    
+    
+}
+
+.address-of {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.address-line-first, .address-line-second, .address-line-third, .contact-line {
+    font-size: 1em;
+}
+
+.phone-num, .pin {
+    margin-left: 5px; 
+}
+
+.action-btn-holder {
+    float: left;
+	width: 100%;
+}
+
+.action-btn {
+	margin: 10px 0 10px 10px;
+	padding:10px 20px 10px 20px;
+	text-align: center;
+	background-color: #18ab99;
+	color:#fff;
+	font-size: 1em;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+<div class="modal-header">
+  <h4 class="modal-title">User Login</h4>
+  <button type="button" class="close" aria-label="Close" title="Close" (click)="activeModal.dismiss('Cross click')">X</button>
+</div>
+
+<div class="login-container">
+    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+        <div class="info-holder">
+          <input type="text" id="txtEmailOrPhone" name="emailPhone" placeholder="Email / Phone Number" [(ngModel)]="model.emailPhone" #emailPhone="ngModel" [ngClass]="{ 'is-invalid': f.submitted && emailPhone.invalid }" required/>
+          <div *ngIf="f.submitted && emailPhone.invalid" class="invalid-feedback">
+              <div *ngIf="emailPhone.errors.required">Phone number is required</div>
+          </div>
+          <input type="password" id="txtPassword" name="password" placeholder="Password" [(ngModel)]="model.password" #password="ngModel" [ngClass]="{ 'is-invalid': f.submitted && password.invalid }" required minlength="6"/>
+          <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+              <div *ngIf="password.errors.required">Password is required</div>
+              <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+          </div>
+        </div>
+        <div class="action-btn-holder">
+          <button class="action-btn">LOGIN</button>
+          <span class="forgot-pwd-text">Forgot password ? <label class="action-link" (click)="openResetPasswordModal()">Reset Password</label></span>
+        </div>
+      </form>
+</div>

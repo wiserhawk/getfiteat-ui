@@ -1,0 +1,69 @@
+.header{
+	background:url(../../../../assets/images/border.png) repeat-x 0px 0px #FFF;
+	padding: 0.5em 0 0 0;
+	border-bottom: 1px solid rgba(214, 213, 212, 0.64);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left:0;
+	z-index: 999;
+	font: 400 14px/22px  'Open Sans', sans-serif;
+}
+
+.logo{
+	float:left;
+	margin: 5px;
+}
+.logo img{
+	display:inline-block;
+}
+.location, .filter {
+	float:left;
+	margin: 5px;
+}
+
+.location-Availbility, .filter-selection {
+	font-size: 0.7em;
+	font-weight: bolder;
+	text-transform: uppercase;
+	cursor: pointer;
+	color: #d42c15;
+	white-space: nowrap; 
+    overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 20ch;
+}
+
+.location-Availbility img, .filter-selection img {
+	margin-top: 2px;
+	width: 25px;
+}
+
+.cart {
+	float:right;
+	margin-right:20px;
+	cursor:pointer;
+}
+.cart-items {
+	float:left;
+	width:10px;
+}
+.cart-items span{
+	margin-left:8px;
+	font-size:0.8em;
+	font-weight:bold;
+	color: #d74a25;
+}
+.cart-items i {
+	margin-top: -7px;
+}
+.nav-icon{
+	float: left;
+	margin: 5px;
+	cursor: pointer;
+}
+.nav-icon span{
+	width:48px;
+	height:34px;
+	display:block;
+}

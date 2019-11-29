@@ -1,0 +1,11 @@
+.pay-btn {
+	border: none;
+	padding: 10px 20px;
+	background: #f3064d;
+	color: #fff;
+	font-size: 1em;
+	font-weight: bold;
+	border-radius: 5px;
+	text-transform: uppercase;
+	cursor: pointer;
+}

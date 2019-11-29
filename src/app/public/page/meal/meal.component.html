@@ -1,0 +1,70 @@
+<div class="meal-container">
+  <div class="meal-img-panel">
+    <img src="{{itemImagePath}}{{image}}" alt="Meal"/>
+  </div>
+
+  <div class="meal-info-panel">
+    <div class="meal-info">
+        <div class="meal-basic-info">
+          <label>{{itemName}}</label>
+          <span> <a href="#">
+            <label> 
+              <span *ngIf="type === 'VEG'; then veg else non_veg"></span>
+              <ng-template #veg><img src="assets/images/veg-small-icon.jpg" title="VEG" /></ng-template>
+              <ng-template #non_veg><img src="assets/images/non-veg-small-icon.png" title="NON-VEG" /></ng-template> 
+            </label> {{category}} </a>
+          </span>
+          <p></p>
+        </div>
+        <div class="meal-info-rate">
+          <div class="rateit">
+            <p>
+              <i class="fa fa-rupee"></i>{{netPrice}} &nbsp; <label><i
+                class="fa fa-rupee"></i>{{price}}</label>
+            </p>
+            <!--<span> </span>-->
+          </div>
+          <div class="cart-action-controls">
+            <!-- <div class="add-to-cart-btn">
+              <span>ADD</span>
+            </div> -->
+            <app-minus-plus-counter [itemId] = "itemId" [name] = "itemName" [price] = "price" [netPrice] = "netPrice" [type] = "type" [quantity] = "quantity" ></app-minus-plus-counter>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+
+      <div class="meal-details-panel">
+          <!-- Tab links -->
+          <div class="tab">
+            <button class="tablinks active" onclick="openTab(event, 'Details')">Details</button>
+            <button class="tablinks" onclick="openTab(event, 'Ingredients')">Ingredients</button>
+            <button class="tablinks" onclick="openTab(event, 'Nutrition')">Nutrition</button>
+          </div>
+          
+          <!-- Tab content -->
+          <div id="Details" class="tabcontent active">
+            <!--<h3>Details</h3>-->
+            <p>{{detail}} </p>
+          </div>
+          
+          <div id="Ingredients" class="tabcontent">
+            <!--<h3>Ingredients</h3>-->
+            <p>{{ingredients}}</p> 
+          </div>
+          
+          <div id="Nutrition" class="tabcontent">
+            <!--<h3>Nutrition</h3>-->
+            <app-nutrition-fact [nutritionFacts]="nutritionFacts"></app-nutrition-fact>
+          </div>
+      
+        </div>
+
+
+
+  </div>
+
+  
+
+</div>
+

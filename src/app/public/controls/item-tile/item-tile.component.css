@@ -1,0 +1,123 @@
+.item-tile img {
+	border-top-left-radius:0.2em;
+	border-top-right-radius:0.2em;
+ 	display: block;
+	width: 100%;
+}
+
+.rateit {
+	padding: 10px 0 0 10px;
+}
+.rateit span{
+	height:18px;
+	width:76px;
+	display:inline-block;
+}
+.rateit p {
+	font-size:1.1em;
+	font-weight:bold;
+	color:#777;	
+}
+.rateit p label{
+	font-size:0.8em;
+	font-weight:bold;
+	color:#aaa;
+	text-decoration:line-through;
+}
+
+.post-basic-info{
+	padding: 1% 7% 5% 7%;
+}
+
+.meal-title a {
+	width: 100%;
+	height:75px;
+	color: #333;
+	font-size: 1em;
+	font-weight: bold;
+	margin-bottom: 0.2em;
+	text-decoration:none;
+	display: block;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+}
+
+
+.meal-title a:hover{
+	color:#2a9cac;
+}
+
+.meal-type {
+	width: 100%;
+	display:inline-block;
+	
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+}
+.meal-type img {
+	float: left;
+	width: 16px;
+	height: 16px;
+	margin: 0 5px 0 0;
+}
+.meal-type span {
+	float: left;
+	font-size: 0.9em;
+	font-weight: bold;
+	color: #777;
+	text-transform: uppercase; 
+}
+/* .post-basic-info span a:hover{
+	color:#B9CB41;
+} */
+.post-basic-info p{
+	font-size: 0.875em;
+	color: #B7B5B5;
+	margin: 0.6em 0;
+	line-height: 1.5em;
+}
+/*--post-info-rate-share--*/
+.post-info-rate-share{
+	border-top: 1px solid rgba(183, 181, 181, 0.36);
+	padding: 1% 0 2%;
+	height: auto;
+}
+.rateit{
+	float:left;
+	margin: 0.18em 0 0 1em;
+}
+
+.cart-action-controls {
+	width: 40%;
+	float:right;
+	padding: 5% ;
+}
+
+.add-to-cart-btn{
+	float:right;
+	margin-right:1.5em;
+}
+
+.add-to-cart-btn span{
+	background:#d74a25;
+	height:20px;
+	width:auto;
+	text-align:center;
+	padding:3px 20px 3px 20px;
+	display:inline-block;
+	font-size:0.8em;
+	font-weight:bold;
+	color:#fff;
+	border-radius:30em;
+	cursor:pointer;
+	-webkit-border-radius:30em;
+	-moz-border-radius:30em;
+	-o-border-radius:30em;
+}
+.add-to-cart-btn span:hover{
+	background:#f09917;
+}

@@ -1,0 +1,42 @@
+<div class="user-detail-container" #userDetailTag>
+    
+    <span *ngIf="isUserLoggedIn === true, then showUserPanel else loginPanel"></span>
+    
+    <ng-template #showUserPanel>
+        <div class="title-holder">
+            <h3><i class='fas fa-user' style='font-size:25px'></i> Logged In User</h3>
+            <span><b>Welcome {{userName}} !!!</b></span> 
+            <span>Do you want to login with diffrent user? <label class="action-link" (click)="logoutUser()">Edit</label></span>
+        </div>
+    </ng-template>
+
+    <ng-template #loginPanel>
+        <div class="title-holder">
+            <h3><i class='fas fa-user' style='font-size:25px'></i> User Login or Sign Up</h3>
+            <span>Login to our website to place your order or Sign Up</span>
+
+            <span *ngIf="loginControlVisible === true; then accountMsg else loginMsg"></span>
+            <ng-template #accountMsg><span>Don't have an account? <label class="action-link" (click)="toggle()">Sign Up</label></span></ng-template>
+            <ng-template #loginMsg><span>Do you have an account? <label class="action-link" (click)="toggle()">Log In</label></span></ng-template>
+        </div>
+        
+    
+        <div class="info-holder">
+            <span *ngIf="loginControlVisible === true; then loginTrue else userAccTrue"></span>
+            <ng-template #loginTrue>
+                <app-user-login></app-user-login>
+            </ng-template>
+            <span *ngIf="userAccCreatorVisible === true; then userAccTrue"></span>
+            <ng-template #userAccTrue>
+                <app-user-account-creator ></app-user-account-creator>
+            </ng-template>
+        </div>
+    </ng-template>
+    
+  <div class="task-complete">
+        <span *ngIf="checked === true; then checkTrue"></span>
+        <ng-template #checkTrue><span class="tick"></span></ng-template>
+  </div>
+  
+</div>
+  

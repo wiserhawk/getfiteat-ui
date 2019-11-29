@@ -1,0 +1,32 @@
+<div class="modal-header">
+    <h4 class="modal-title">Become A Partner</h4>
+    <button type="button" class="close" aria-label="Close" title="Close" (click)="activeModal.dismiss('Cross click')">X</button>
+  </div>
+  
+  <div class="partnership-request-container">
+    <div class="title-holder">
+      <span>* Enter your details and we will contact you</span>
+    </div>
+    <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+      <div class="info-holder">
+          <input type="text" id="txtName" name="name" placeholder="Name" [(ngModel)]="model.name" #name="ngModel" [ngClass]="{ 'is-invalid': f.submitted && name.invalid }" required/>
+          <div *ngIf="f.submitted && name.invalid" class="invalid-feedback">
+              <div *ngIf="name.errors.required">Name is required</div>
+          </div>
+        <input type="text" id="txtEmail" name="email" placeholder="Email" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required/>
+        <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+            <div *ngIf="email.errors.required">Phone number is required</div>
+        </div>
+        <input type="phone" id="txtPhone" name="phone" placeholder="Phone" [(ngModel)]="model.phone" #phone="ngModel" [ngClass]="{ 'is-invalid': f.submitted && phone.invalid }" required minlength="10"/>
+        <div *ngIf="f.submitted && phone.invalid" class="invalid-feedback">
+            <div *ngIf="phone.errors.required">Phone is required</div>
+            <div *ngIf="phone.errors.minlength">Phone must have 10 characters</div>
+        </div>
+      </div>
+      <div class="action-btn-holder">
+        <button class="action-btn">SUBMIT</button>
+      </div>
+      
+    </form>
+  </div>
+  

@@ -1,0 +1,40 @@
+
+.incrementer-control {
+	font: 400 14px/22px  'Open Sans', sans-serif;
+	float:left;
+	width: 90px;
+	height: 25px;
+	border: 1px solid #aaa;
+	border-radius: 20px;
+}
+
+.incrementer-control span {
+	float:left;
+	width:28px;
+	height:25px;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight:bolder;
+	color: #d74a25;
+}
+
+.minus, .plus{
+	cursor:pointer;
+}
+
+/* .incrementer-control span:hover { */
+/* 	font-size: 1.5em; */
+/* 	font-weight:bolder; */
+/* 	color: #d00a25; */
+/* } */
+
+.incrementer-control input {
+	float:left;
+	width:30px;
+	height:23px;
+	border:none;
+	font-size:1.2em;
+	font-weight:bold;
+	text-align:center;
+	color: #777;
+}

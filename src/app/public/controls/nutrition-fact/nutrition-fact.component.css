@@ -1,0 +1,75 @@
+/*** Nutrition Table CSS */
+
+.nutrition-facts-panel {
+	width: 100%;
+	height: auto;
+}
+.nutrition-facts-main-title {
+    float: left;
+	width: 100%;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #555;
+}
+.nutrition-facts-sub-title {
+    float: left;
+	width: 100%;
+	font-size: 1em;
+	color: #555;
+}
+
+.nutrition-facts-sub-title label {
+	float: left;
+	width: 50%
+}
+.nutrition-value {
+	float: right;
+	width: 50%;
+	text-align: right;
+	font-weight: bold;
+	color: #555;
+}
+.main-title, .sub-title, .vitamin-minerals {
+    float: left;
+	width: 100%;
+}
+.main-title label, .sub-title label {
+	font-weight: bold;
+	color: #555;
+}
+.sub-title label{
+	padding-left: 15px;
+	font-weight: normal;
+}
+.main-title span , .sub-title span{
+	padding-left: 10px;	 
+	color: #555;
+}
+.left-value, .right-value {
+	width: 50%;
+	float: left;
+	color: #555;
+}
+.last-note {
+    width: 100%;
+    color: #777;
+    padding-top: 10px;
+}
+.h-thicker-line {
+	float: left;
+	width: 100%;
+	border: 4px solid #777;
+	margin: 0;
+}
+.h-thick-line {
+	float: left;
+	width: 100%;
+	border: 2px solid #777;
+	margin: 0;
+}
+.h-thin-line {
+	float: left;
+	width: 100%;
+	color: #999;
+	margin: 0;
+}

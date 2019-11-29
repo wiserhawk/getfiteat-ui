@@ -1,0 +1,157 @@
+.payment-method-container {
+	float:left;
+	width:450px;
+	padding-bottom:20px;
+	margin: 0 0 20px 0;
+	border: 1px solid #ccc;
+	background: #fff;
+	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 10px 10px 15px 0 rgba(0, 0, 0, 0.19);
+}
+
+.title-holder {
+	width: 100%;
+}
+
+.title-holder h3 {
+	width: 100%;
+	padding: 10px 0 0 10px;
+	font-size: 1.3em;
+}
+
+.title-holder span {
+	width: 100%;
+	padding: 0 0 0 10px;
+}
+
+.info-holder {
+	width: 100%;
+	padding: 10px 0 0 10px;
+}
+
+.info-holder input {
+	width:250px;
+	height: 40px;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	margin-top: 10px;
+	padding:10px;
+	font-size: 1.2em;
+	color: #3d80c2;
+}
+
+.invalid-feedback {
+	width: 100%;
+	color: #c20c27;
+}
+
+.action-btn-holder {
+	width: 100%;
+	#padding: 10px 0 0 10px;
+}
+
+.action-btn {
+	width:275px;
+	margin: 10px;
+	padding:20px;
+	text-align: center;
+	background-color: #18ab99;
+	color:#fff;
+	font-size: 1.2em;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+/* Style the tab */
+.tab {
+    float: left;
+    background-color: #f1f1f1;
+    width: 120px;
+	height: 250px;
+	margin-left: 10px;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+    display: block;
+    background-color: inherit;
+	color: #333;
+    padding: 10px 10px;
+	margin: 5px 10px;
+	width: 100px;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+	background-color: #ddd;
+	background: #fff;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+	background-color: #fff;
+	font-weight: bold;
+	
+}
+
+/* Style the tab content */
+.tabcontent {
+    float: left;
+    padding: 0px 12px;
+    width: 200px;
+    border-left: none;
+	height: 250px;
+	display: none;
+}
+
+.tabcontent.active {
+    float: left;
+    padding: 0px 12px;
+    width: 200px;
+    border-left: none;
+	height: 250px;
+	display: block;
+}
+
+.title-text {
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.pay-btn {
+	border: none;
+	padding: 10px 20px;
+	background: #f3064d;
+	color: #fff;
+	font-size: 1em;
+	font-weight: bold;
+	border-radius: 5px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+
+/*--media Quries for 640px-monitors-*/
+@media only screen and (max-width:640px) and (min-width:450px) {
+	.payment-method-container {
+		width:450px;
+	}
+}
+/*--media Quries for 480px-monitors-*/
+@media only screen and (max-width:450px) and (min-width:320px) {
+	.payment-method-container {
+		width:100%;
+	}
+}
+/*--media Quries for 320px-monitors-*/
+@media only screen and (max-width:320px) and (min-width:240px) {
+	.payment-method-container {
+		width:100%;
+	}
+}

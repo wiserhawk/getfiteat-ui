@@ -1,0 +1,325 @@
+.order-detail-container {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	background: #fff;
+}
+
+.title-holder {
+	width: 100%;
+}
+
+.title-holder h3 {
+	width: 100%;
+	padding: 10px 0 0 10px;
+	font-size: 1.5em;
+}
+
+.title-holder span {
+	width: 100%;
+	padding: 0 0 0 10px;
+}
+
+.order-info-panel {
+	float: left;
+	width: 100%;
+	height: auto;
+	padding: 20px 0 0 10px;
+}
+
+.order-info {
+	float: left;
+	width: 49%;
+}
+
+.order-info-label, .delivery-add-label {
+	font-size: 0.9em;
+	font-weight: bold;
+	color:#555;
+	text-transform: uppercase;
+}
+
+.order-info-value{
+	font-size: 0.9em;
+	color: #333;
+}
+
+.delivery-address-panel {
+	width: 100%;
+	height:  auto;
+	padding: 50px 0 10px 0;
+}
+
+.address-line {
+	font-size: 1em;
+}
+
+/*.separator {
+	width: 100%;
+	border: 1px solid #eee;	
+	float: left;
+}*/	
+
+.order-detail {
+	width:100%;
+}
+
+.order-detail ul {
+	list-style: none;
+	width:100%;
+	padding:0 0 0 5px;
+}
+
+.order-detail ul  li {
+	margin-left:0px;
+	font-size: 1em;
+	float:left;
+	width:100%;
+}
+
+
+.cart-item {
+	float:left;
+	margin-top: 15px;
+	padding-bottom:10px;
+}
+.item-info {
+	float:left;
+	width:100%;
+}
+
+.item-type {
+	float:left;
+	width: 5%;
+	
+}
+
+.item-text{
+	float:left;
+	width: 90%;
+	height: auto;
+	color: #555;
+	font-size: 1em; 
+}
+.item-price-contols{
+	float:left;
+	width: 100%;
+}
+.item-price {
+	float:left;
+	width: 90%;
+	font-family: sans-serif;
+	font-size:1em;
+	font-weight: bold; 
+	color: #777;
+	padding-left: 10px; 
+}
+.item-price i {
+	padding: 5px 0 0 10px;
+	
+}	
+.item-price label {
+	text-decoration:line-through;
+	font-size:0.8em;
+	color:#777;
+}
+
+.final-order-holder {
+	float:left;
+	width: 100%;
+	height: auto;
+	font-size: 1em;
+	margin-top: 30px;
+}
+
+.row-main, .row-sub {
+	float:left;
+	width: 99%;
+	margin: 10px;
+	font-weight: bold;
+}
+
+.row-main label, .row-sub label {
+	float: left;
+}
+
+.row-main span, .row-sub span {
+	float: right;
+	padding-right: 50px;
+}
+
+.row-sub label {
+	padding-left: 15px;
+	color: #aaa;
+}
+
+.row-sub span {
+	color: #aaa;
+}
+
+.payable-holder {
+	float: left;
+	width: 100%;
+	height: 70px;
+	margin-top: 20px;
+	border-top: 1px solid #aaa;
+}
+
+.payable-main {
+	float: left;
+	width: 100%;
+	
+}
+
+.payable-main label {
+	float: left;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 15px;
+}
+
+.payable-main span {
+	float: right;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 15px;
+	padding-right: 20px;
+}
+
+/* start progress-bar css */
+
+.progressbar-container {
+	width: 98%;
+	#margin: 20px ;
+	text-align: center;
+	position: relative;
+	background: #eee;
+	padding: 5px;
+}
+
+/*progressbar*/
+#progressbar {
+	#margin-bottom: 30px;
+	overflow: hidden;
+	/*CSS counters to number the steps*/
+	counter-reset: step;
+}
+#progressbar li {
+	list-style-type: none;
+	color: #555;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	font-weight: bold;
+	width: 33.33%;
+	float: left;
+	position: relative;
+}
+#progressbar li:before {
+	content: '...'; /*counter(step);*/
+	#counter-increment: step;
+	width: 20px;
+	line-height: 20px;
+	display: block;
+	font-size: 1em;
+	color: #333;
+	background: white;
+	border-radius: 3px;
+	margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background: white;
+	position: absolute;
+	left: -50%;
+	top: 9px;
+	z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+	/*connector not needed before the first step*/
+	content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+	background: #27AE60;
+	color: white;
+	content: "\2713";
+}
+
+.status-list {
+	height: 33px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+}
+
+.btn-change {
+	padding: 5px 10px;
+	border: none;
+	color: #fff;
+	background-color: #27AE60;
+	cursor: pointer;
+}
+
+/*.progressbar {
+    counter-reset: step;
+}
+.progressbar li {
+    list-style-type: none;
+    width: 30%;
+    float: left;
+    font-size: 12px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+	color: #fff;
+	#z-index: 1;
+}
+.progressbar li:before {
+    width: 20px;
+    height: 20px;
+    content: counter(step);
+    counter-increment: step;
+    line-height: 22px;
+    border: 2px solid #fff;
+    display: block;
+    text-align: center;
+    margin: 0 auto 2px auto;
+    #border-radius: 50%;
+	#background-color: white;
+	#z-index: -1;
+}
+
+.progressbar li:after {
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    top: 10px;
+    left: -50%;
+    #z-index: -1;
+}
+.progressbar li:first-child:after {
+    content: none;
+}
+.progressbar li.active {
+    color: rgb(17, 192, 17);
+    content: '\2713';
+    font-weight: bold;
+}
+.progressbar li.active:before {
+    border-color: #55b776;
+    box-shadow:  0px 0px 3px 3px rgb(156, 199, 160);
+}
+.progressbar li.active + li:after {
+    background-color: #55b776;
+}*/
+
+/* end progress-bar css */
+
+
+
+

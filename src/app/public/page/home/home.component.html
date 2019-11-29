@@ -1,0 +1,19 @@
+<!---start-content---->
+<div class="content" onclick="closeNav()">
+	<div class="main-banner">
+		<h3>Get-Fit-Eat</h3>
+		<h4>Everything that keeps you on fitness track</h4>
+	</div>
+	<div class="wrap">
+	 <div id="main" role="main">
+	      <ul id="tiles">
+	        <!-- These are our grid blocks -->
+	        <li *ngFor = "let fi of items ">
+						<app-item-tile [itemId] = "fi.itemId" [name] = "fi.name" [price] = "fi.price" [netPrice] = "fi.discountedPrice" [image] = "fi.image" [category] = "fi.category" [type] = "fi.type" [quantity] = "0"></app-item-tile>
+	        </li>
+	        <!-- End of grid blocks -->
+	      </ul>
+	    </div>
+	</div>
+</div>
+<!---//End-content---->

@@ -1,0 +1,43 @@
+.checkout-panel {
+    width: 100%;
+    margin: 55px 0 0 0 ;
+    position: relative;  
+}
+
+.checkout-control-holder {
+    float: left;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.left-panel, .right-panel {
+    float: left;
+    width: 500px;
+    margin: 0 50px;
+}
+
+
+/*--media Quries for 640px-monitors-*/
+@media only screen and (max-width:640px) and (min-width:480px) {
+	.left-panel, .right-panel {
+        float: none;
+        width: 480px;
+        margin: 0 auto;
+    }
+}
+/*--media Quries for 480px-monitors-*/
+@media only screen and (max-width:480px) and (min-width:320px) {
+	.left-panel, .right-panel {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+/*--media Quries for 320px-monitors-*/
+@media only screen and (max-width:320px) and (min-width:240px) {
+	.left-panel, .right-panel {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,54 @@
+<!-- Start Left side menu -->
+<div id="sidemenu" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	
+	<span *ngIf="isPartnerLoggedIn; then partnerMenu else userMenu"></span>
+	<ng-template #userMenu>
+		<span *ngIf="isUserLoggedIn; then userMenu else genericMenu"></span>
+		<ng-template #userMenu>
+				<div class="profile-title">
+						<div class="profile-img">
+							 <img src="assets/images/partner.jpg" />
+						</div>
+						<div class="profile-info">
+							<div>{{userName}}</div>
+							<div>{{userId}}</div>
+						</div>
+				</div>
+				<ul>
+						<li><a href="#"><span>Profile</span></a></li>
+						<li><a href="#"><span>Home</span></a></li>
+						<li><a  (click)="logoutUser()" ><span>Logout</span></a></li>
+						<div class="clear"> </div>
+					</ul>
+		</ng-template>
+		<ng-template #genericMenu>
+			<ul>
+				<li><a href="#"><span>Home</span></a></li>
+				<li><a  (click)="openLoginModal()" ><span>Login</span></a></li>
+				<div class="clear"> </div>
+			</ul>
+		</ng-template>
+	</ng-template>
+
+	<ng-template #partnerMenu>
+
+		<div class="profile-title">
+	      <div class="profile-img">
+	      	 <img src="assets/images/partner.jpg" />
+	      </div>
+	      <div class="profile-info">
+		      <div>{{partnerName}}</div>
+		      <div>{{partnerId}}</div>
+	      </div>
+    </div>
+		
+			<ul>
+				<li><a href="/secure/vendor/dashboard"><span>Deshboard</span></a></li>
+				<li><a href="/partner/profile"><span>Profile</span></a></li>
+				<li><a  (click)="logoutPartner()" ><span>Logout</span></a></li>
+				<div class="clear"> </div>
+			</ul>
+	</ng-template>
+</div>
+<!-- End Left side menu -->

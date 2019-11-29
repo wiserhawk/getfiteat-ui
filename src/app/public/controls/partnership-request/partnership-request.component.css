@@ -1,0 +1,60 @@
+.partnership-request-container {
+	width:100%;
+	height:auto;
+	margin: 10px 0;
+	background: #fff;
+}
+
+.title-holder {
+	width: 100%;
+}
+
+.title-holder h3 {
+	width: 100%;
+	padding: 10px 0 0 10px;
+	font-size: 1.5em;
+}
+
+.title-holder span {
+	width: 100%;
+	padding: 0 0 0 10px;
+}
+
+.info-holder {
+	width: 100%;
+	padding: 10px 0 0 10px;
+}
+
+.info-holder input {
+	width:90%;
+	height: 40px;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	margin-top: 10px;
+	padding:10px;
+	font-size: 1.2em;
+	color: #3d80c2;
+}
+
+.invalid-feedback {
+	width: 100%;
+	color: #c20c27;
+}
+
+.action-btn-holder {
+	width: 100%;
+	padding: 10px 0 0 10px;
+}
+
+.action-btn {
+	width:90%;
+	padding: 10px;
+	text-align: center;
+	background-color: #18ab99;
+	color:#fff;
+	font-size: 1em;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+}

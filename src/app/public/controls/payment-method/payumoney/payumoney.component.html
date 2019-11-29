@@ -1,0 +1,22 @@
+
+
+<!--<button class="pay-btn" (click)="placeOnlineOrder()">Pay Online <i class="fa fa-rupee"></i>{{payable}}</button>-->
+
+<!--PayUmoney Test URL https://test.payu.in/_payment-->
+<!--PayUmnoey Prod URL https://secure.payu.in/_payment-->
+<form ngNoForm action="https://test.payu.in/_payment" name="payuform" method="POST"  #pumForm>
+    <textarea id="productinfo" name="productinfo" ng-model="productinfo" hidden [(ngModel)]="payuform.productinfo"></textarea>
+	<textarea id="firstname" name="firstname" ng-model="firstname" hidden [(ngModel)]="payuform.firstname"></textarea>
+	<textarea id="email" name="email" ng-model="email" hidden [(ngModel)]="payuform.email"></textarea>
+	<textarea id="phone" name="phone" ng-model="phone" hidden [(ngModel)]="payuform.phone"></textarea>
+	<textarea id="amount" name="amount" ng-model="amount" hidden [(ngModel)]="payuform.amount"></textarea>
+    
+    <textarea name="surl" id="surl" ng-model="surl" rows="2" cols="2" hidden [(ngModel)]="payuform.surl"></textarea>
+    <textarea name="furl" id="furl" ng-model="furl" rows="2" cols="2" hidden [(ngModel)]="payuform.furl"></textarea>
+    <textarea name="key" id="key" ng-model="key" rows="2" cols="2" hidden [(ngModel)]="payuform.key"></textarea>
+    <textarea name="hash" id="hash" ng-model="hash" rows="2" cols="2" hidden [(ngModel)]="payuform.hash"></textarea>
+    <textarea name="txnid" id="txnid" ng-model="txnid" rows="2" cols="2" hidden [(ngModel)]="payuform.txnid"></textarea>
+    <textarea name="service_provider" id="service_provider" rows="2" cols="2" hidden></textarea>
+    <button *ngIf="disablePaymentButton" type="button"  class="pay-btn" (click)="confirmPayment()">Confirm</button>
+	<button *ngIf="!disablePaymentButton" type="submit" class="pay-btn">Submit</button>
+</form>

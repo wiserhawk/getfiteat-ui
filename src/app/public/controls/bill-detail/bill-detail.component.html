@@ -1,0 +1,54 @@
+
+<div class="bill-detail-container">
+	<div class="title-holder">
+			<h3><i class='fas fa-file-invoice-dollar' style='font-size:25px'></i> Bill Details</h3>
+			<span>This is your final itemized bill.</span>
+	</div>
+	<div class="bill-detail">
+		<ul> 
+			<li *ngFor = "let it of billingItems" id="{{it.itemId}}">
+				<div class="cart-item">
+					<div class="item-info">
+						<div class="item-type" >
+							<span *ngIf="it.type === 'VEG'; then veg else non_veg"></span>
+							<ng-template #veg><img src="assets/images/veg-small-icon.jpg" title="VEG" /></ng-template>
+							<ng-template #non_veg><img src="assets/images/non-veg-small-icon.png" title="NON-VEG" /></ng-template> 
+						</div>
+						<div class="item-text">{{it.itemName}}</div>
+					</div>
+					<div class="item-price-contols">
+						<div class="item-price">
+								<i class="fa fa-rupee"></i>{{it.netPrice}} 
+								<label><i class="fa fa-rupee"></i>{{it.price}}</label> 
+							
+						</div>
+						<div class="item-incrementer"> 
+							<app-minus-plus-counter [itemId] = "it.itemId" [name] = "it.itemName" [price] = "it.price" [netPrice] = "it.netPrice" [type] = "it.type" [quantity] = "it.quantity" ></app-minus-plus-counter>
+						</div>
+						<div class="item-delete"><img src="assets/images/close2.png" title="Delete" (click) = "deteleItemFromCart(it.itemId);"/></div>
+					</div>
+				</div>
+			</li>
+	 	</ul>
+	 	
+	 	<div class="coupon-holder">
+			 <div class="coupon-control"><input type="text" #coupon name="coupon" placeholder="Enter Coupon" /><button (click)="applyCoupon(coupon.value)">Apply</button></div>
+			 <div class="coupon-message">
+				 <span *ngIf="couponApplied === true; then success else fail"></span>
+				 <ng-template #success><span class="tick"> {{couponMessage}}</span></ng-template>
+				 <ng-template #fail><span class="cross"> {{couponMessage}}</span></ng-template>
+			 </div>
+	 	</div>
+	 	<div class="final-bill-holder">
+	 		<div class="row-main"><label>Item Price</label><span><i class="fa fa-rupee"></i>{{itemPrice}}</span></div>
+	 		<div class="row-main"><label>Delivery Charges</label><span>+ <i class="fa fa-rupee"></i>{{deliveryCharge}}</span></div>
+	 		<div class="row-main"><label>GST (5%)</label><span>+ <i class="fa fa-rupee"></i>{{gst}}</span></div>
+	 		<div class="row-sub"><label>CGST (2.5%)</label><span>+ <i class="fa fa-rupee"></i>{{cgst}}</span></div>
+	 		<div class="row-sub"><label>SGST (2.5%)</label><span>+ <i class="fa fa-rupee"></i>{{sgst}}</span></div>
+	 		<div class="row-main"><label>Coupon Discount</label><span>- <i class="fa fa-rupee"></i>{{couponDiscount}}</span></div>
+	 	</div>
+	 	<div class="payable-holder">
+	 		<div class="payable-main"><label>PAYABLE</label><span><i class="fa fa-rupee"></i>{{payable}}</span></div>
+	 	</div>
+	</div>
+</div>

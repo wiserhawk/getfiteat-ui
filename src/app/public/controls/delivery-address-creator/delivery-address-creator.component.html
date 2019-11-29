@@ -1,0 +1,52 @@
+<div class="delivery-address-creator-container">
+	<!--<div class="title-holder">
+		<h3><i class='fas fa-map-marker-alt' style='font-size:25px'></i> Delivery Address</h3>
+		<span>Provide your address details for food delivery.</span>
+	</div>-->
+	<form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+		<div class="info-holder">
+			<div class="map"></div>
+			<select id="lstAddressType" name="addressType" [(ngModel)]="model.addressType" #addressType="ngModel">
+				<option value="HOME">HOME</option>
+				<option value="OFFICE">OFFICE</option>
+				<option value="OTHER">OTHER</option>
+			</select>
+			
+			<input type="text" id="txtStreet" name="street" placeholder="Door Number, Floor Number, Building, Block, Sector" [(ngModel)]="model.street" #street="ngModel" [ngClass]="{ 'is-invalid': f.submitted && street.invalid }" required maxlength="250"/>
+			<div *ngIf="f.submitted && street.invalid" class="invalid-feedback">
+                <div *ngIf="street.errors.required">Address is required</div>
+            </div>
+			
+			<input type="text" id="txtArea" name="area" placeholder="Area, Destrict e.g. Maliya Nagar, South Delhi" [(ngModel)]="model.area" #area="ngModel" [ngClass]="{ 'is-invalid': f.submitted && area.invalid }" required maxlength="100" />
+			<div *ngIf="f.submitted && area.invalid" class="invalid-feedback">
+                <div *ngIf="area.errors.required">Area is required</div>
+            </div>
+			
+			<input type="text" id="txtState" name="name" placeholder="State e.g. New Delhi" [(ngModel)]="model.state" #state="ngModel" [ngClass]="{ 'is-invalid': f.submitted && state.invalid }" required maxlength="50"/>
+			<div *ngIf="f.submitted && state.invalid" class="invalid-feedback">
+                <div *ngIf="state.errors.required">State is required</div>
+			</div>
+			
+			<input type="text" id="txtPincode" name="pincode" placeholder="Pincode" [(ngModel)]="model.pincode" #pincode="ngModel" [ngClass]="{ 'is-invalid': f.submitted && pincode.invalid }" required minlength="6" maxlength="6"/>
+			<div *ngIf="f.submitted && pincode.invalid" class="invalid-feedback">
+                <div *ngIf="pincode.errors.required">Pincde number is required</div>
+                <div *ngIf="pincode.errors.minlength">Pincode number must be 6 characters</div>
+            </div>
+			
+			<input type="text" id="txtPhone" name="phone" placeholder="Phone" [(ngModel)]="model.phone" #phone="ngModel" [ngClass]="{ 'is-invalid': f.submitted && phone.invalid }" required minlength="10" maxlength="10"/>
+			<div *ngIf="f.submitted && phone.invalid" class="invalid-feedback">
+                <div *ngIf="phone.errors.required">Phone number is required</div>
+                <div *ngIf="phone.errors.minlength">Phone number must be 10 characters</div>
+            </div>
+            
+			<!--<input type="text" id="txtEmail" name="email" placeholder="Email" [(ngModel)]="model.email" #email="ngModel" [ngClass]="{ 'is-invalid': f.submitted && email.invalid }" required email/>
+			<div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                <div *ngIf="email.errors.required">Email is required</div>
+                <div *ngIf="email.errors.email">Email must be a valid email address</div>
+            </div>-->
+		</div>
+		<div class="action-btn-holder">
+			<button id="actionBtn" class="action-btn">SAVE</button>
+		</div>
+	</form>
+</div>

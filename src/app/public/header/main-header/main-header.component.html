@@ -1,0 +1,56 @@
+<!---start-header---->
+<div class="header">
+	<div class="wrap">
+		<div class="nav-icon" onclick="openNav()">
+			<!-- <a href="#" class="right_bt" id="activator" onclick="openNav()"> -->
+			<i class="material-icons">menu</i> 
+			<!-- </a> -->
+		</div>
+		<div class="logo">
+			<!--<a href="index.html"><img src="images/logo.png" title="pinbal" /></a>-->
+			<a href="index.html"><img src="/assets/images/logo.png" title="Get-Fit-Eat" /></a>
+		</div>
+		<div class="location">
+			<span *ngIf="isLoactonSelected === true; then locationSelected else locatonNotselected"></span>
+			<ng-template #locationSelected>
+				<div class="location-Availbility" (click)="openLocationModal()">
+					<img src="/assets/images/icons8-place-marker-30.png" title="{{area}}, {{city}}"/>
+					{{area}}, {{city}}
+				</div>
+			</ng-template> 
+			<ng-template #locatonNotselected>
+					<div class="location-Availbility" (click)="openLocationModal()" title="Check Delivery Availability Zone">
+						<img src="/assets/images/icons8-place-marker-30.png" />
+						Availability
+					</div>
+			</ng-template>
+		</div>
+
+		<!--<div class="filter">
+			<span *ngIf="isFilterSelected === true; then filterSelected else filterNotselected"></span>
+			<ng-template #filterSelected>
+				<div class="filter-selection" (click)="openLocationModal()">
+					<img src="/assets/images/icons8-slider-30.png" title="Select Filter"/>
+					Filter
+				</div>
+			</ng-template> 
+			<ng-template #filterNotselected>
+				<div class="filter-selection" (click)="openLocationModal()">
+					<img src="/assets/images/icons8-slider-30.png" title="Select Filter"/>
+					{{filter}}
+				</div>
+			</ng-template>
+		</div>-->
+
+
+		<div class="cart" onclick="openCartBox()">
+			<div class="cart-items">
+				<span>{{size}}</span> <i class="material-icons"
+					style="font-size: 25px; color: #555">shopping_cart</i>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!---//End-header---->

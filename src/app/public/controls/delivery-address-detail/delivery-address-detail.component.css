@@ -1,0 +1,122 @@
+.delivery-address-creator-container {
+	float:left;
+	width:450px;
+	height:auto;
+	margin: 0 0 20px 0;
+	border: 1px solid #ccc;
+	background: #fff;
+	box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.19), 10px 10px 15px 0 rgba(0, 0, 0, 0.19);
+}
+
+.delivery-address-creator-container.finish {
+	pointer-events: none;
+	border: 2px solid rgba(31, 168, 4, 0.80);
+	opacity: 0.5;
+}
+
+.delivery-address-creator-container.active {
+	
+}
+
+.title-holder {
+	width: 100%;
+}
+
+.title-holder h3 {
+	width: 100%;
+	padding: 10px 0 0 10px;
+	font-size: 1.3em;
+
+}
+
+.title-holder span {
+    float: left;
+	width: 100%;
+	padding: 10px 0 0 10px;
+}
+
+.address-card {
+    float: left;
+    width: 300px;
+    margin: 10px 0 0 10px;
+	#border: 1px solid #eee;
+	border-radius: 3px;
+	background-color: #eee;
+    padding: 5px 10px;
+    font-size: 1em;
+    position: relative;
+}
+
+.address-card.active {
+    border: 2px solid #999;
+}
+
+.select-card {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+}
+
+.select-card.active {
+    background-color:#999;
+}
+
+.address-of {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.address-line-first, .address-line-second, .address-line-third, .contact-line {
+    font-size: 1em;
+}
+
+.phone-num, .pin {
+    margin-left: 5px; 
+}
+
+.info-holder {
+	width: 100%;
+	padding: 10px 0 0 10px;
+}
+
+.action-link {
+    color: #cf2900;
+    cursor: pointer;
+}
+
+.task-complete {
+	float: left;
+	width: 100%;
+}
+
+.tick:before {
+	float: right;
+	content: "\2713";
+	color: #fff;
+	font-weight: bolder;
+	font-size: 1.5em;
+	background: #00a11b;
+	padding: 5px 10px;
+  }
+
+/*--media Quries for 640px-monitors-*/
+@media only screen and (max-width:640px) and (min-width:450px) {
+	.delivery-address-creator-container {
+		width:450px;
+	}
+}
+/*--media Quries for 480px-monitors-*/
+@media only screen and (max-width:450px) and (min-width:320px) {
+	.delivery-address-creator-container {
+		width:100%;
+	}
+}
+/*--media Quries for 320px-monitors-*/
+@media only screen and (max-width:320px) and (min-width:240px) {
+	.delivery-address-creator-container {
+		width:100%;
+	}
+}

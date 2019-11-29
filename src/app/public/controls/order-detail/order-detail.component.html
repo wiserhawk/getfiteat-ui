@@ -1,0 +1,64 @@
+
+<div class="order-detail-container">
+	<div class="title-holder">
+			<h3><i class='fas fa-file-invoice' style='font-size:25px'></i> Order Details</h3>
+  	</div>
+	
+	<div class="progressbar-container">
+		<ul id="progressbar" class="progressbar">
+			<li #confirm>Confirm</li>
+			<li #shipped>Shipped</li>
+			<li #delivered>Delivered</li>
+		</ul>
+	</div>
+
+	<div class="order-info-panel">
+		<div class="order-info"><label class="order-info-label">Order No.:</label> <span class="order-info-value">#{{orderDetail.orderId}}</span></div>
+		<div class="order-info"><label class="order-info-label">Date:</label> <span class="order-info-value">{{orderDetail.orderDate}}</span></div>
+		<div class="order-info"><label class="order-info-label">Payment:</label> <span class="order-info-value">{{orderDetail.paymentMode}}</span></div>
+		<div class="order-info"><label class="order-info-label">Phone:</label> <span class="order-info-value">{{orderDetail.contactNumber}}</span></div>
+		<div class="order-info"><label class="order-info-label">Status:</label> <span class="order-info-value">{{orderDetail.orderStatus}}</span></div>
+		<div class="order-info"><label class="order-info-label">Tnx No.:</label> <span class="order-info-value">{{orderDetail.transactionId}}</span></div>
+		<div class="delivery-address-panel"> 
+			<div class="delivery-add-label">Deliver To:</div>  
+			<div class="address-line">{{orderDetail.customerName}}</div>
+			<div class="address-line">{{orderDetail.shipTo}}</div>  
+			<!--<div class="address-line">{{address.area}}</div>
+			<div class="address-line">{{address.state}} - {{address.pincode}}</div>-->
+		</div>
+		
+	</div>
+ 
+	<div class="order-detail">
+		<ul> 
+			<li *ngFor = "let it of orderDetail.invoice.itemsList" id="{{it.itemId}}">
+				<div class="cart-item">
+					<div class="item-info">
+						<div class="item-type">
+							<span *ngIf="it.type === 'VEG'; then veg else non_veg"></span>
+							<ng-template #veg><img src="assets/images/veg-small-icon.jpg" title="VEG" /></ng-template>
+							<ng-template #non_veg><img src="assets/images/non-veg-small-icon.png" title="NON-VEG" /></ng-template> 
+						</div>
+						<div class="item-text">{{it.name}}</div>
+					</div>
+					<div class="item-price-contols">
+						<div class="item-price">
+								<i class="fa fa-rupee"></i>{{it.price}} X {{it.quantity}}							
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="final-order-holder">
+			<div class="row-main"><label>Item Price</label><span><i class="fa fa-rupee"></i>{{orderDetail.invoice.totalPrice.toFixed(2)}}</span></div>
+			<div class="row-main"><label>Delivery Charges</label><span>+ <i class="fa fa-rupee"></i>{{orderDetail.invoice.deliveryCharge.toFixed(2)}}</span></div>
+			<div class="row-main"><label>GST (5%)</label><span>+ <i class="fa fa-rupee"></i>{{orderDetail.invoice.gst.toFixed(2)}}</span></div>
+			<div class="row-sub"><label>CGST (2.5%)</label><span>+ <i class="fa fa-rupee"></i>{{orderDetail.invoice.cgst.toFixed(2)}}</span></div>
+			<div class="row-sub"><label>SGST (2.5%)</label><span>+ <i class="fa fa-rupee"></i>{{orderDetail.invoice.sgst.toFixed(2)}}</span></div>
+			<div class="row-main"><label>Coupon Discount</label><span>- <i class="fa fa-rupee"></i>{{orderDetail.invoice.couponDiscount.toFixed(2)}}</span></div>
+		</div>
+		<div class="payable-holder">
+			<div class="payable-main"><label>Final Amount</label><span><i class="fa fa-rupee"></i>{{orderDetail.invoice.payable.toFixed(2)}}</span></div>
+		</div>
+	</div>
+</div>

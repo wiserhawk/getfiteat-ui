@@ -1,0 +1,41 @@
+<div class="payment-method-container">
+	<div class="title-holder">
+		<h3><i class='fas fa-wallet' style='font-size:25px'></i> Payment Method</h3>
+		<span>Choose your payment method to pay</span>
+	</div>
+	<!--<div class="payment-option-list-panel">
+		<ul>
+			<li>Cash</li>
+			<li>PayUmoney</li>		
+		</ul>
+	</div>
+	<div class="payment-method-contents">
+		<div id="payumoney-method">
+			<app-payumoney></app-payumoney>
+		</div>
+		
+	</div>-->
+
+	<div class="tab">
+		<button class="tablinks active" onclick="openTab(event, 'Cash');" id="defaultOpen">Cash</button>
+		<button class="tablinks" onclick="openTab(event, 'Online');">Online</button>
+	  </div>
+	  
+	  <div id="Cash" class="tabcontent active">
+			<div class="title-text">Cash on Delivery</div>
+			<p>You have selected Cash on Delivery payment option.</p>
+			<button class="pay-btn" (click)="placeCashOrder()">Place Order <!--<i class="fa fa-rupee"></i>{{payable}}--></button>
+	  </div>
+	  
+	  <div id="Online" class="tabcontent">
+			<div class="title-text">Online</div>
+			<p>You have selected Online payment option.</p> 
+			<app-payumoney></app-payumoney>
+	  </div>
+	  
+	 
+
+
+</div>
+
+<!-- Find java-scripts belong to this page at index.html-->

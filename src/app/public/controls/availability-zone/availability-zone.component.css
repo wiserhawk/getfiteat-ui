@@ -1,0 +1,78 @@
+.availability-zone-container {
+	width:100%;
+	height:auto;
+	background: #fff;
+	
+}
+
+.title-holder {
+	width: 100%;
+}
+
+.title-holder h3 {
+	width: 100%;
+	font-size: 1em;
+    text-align: center;
+}
+
+
+
+.info-holder {
+    width: 100%;
+}
+
+.info-holder form {
+	width: 100%;
+	padding: 0 5%;
+}
+
+.info-holder form input {
+	width:95%;
+	height: 40px;
+	border: none;
+	border-radius: 5px;
+	padding: 0 5px 0 5px;
+	font-size: 1em;
+	color: #4b5055;
+    background-color: #eee;
+    margin: 5px 0;
+    
+}
+
+.invalid-feedback {
+	display: inherit;
+	width: 100%;
+	color: #c20c27;
+}
+
+.response-success-lbl {
+	width: 100%;
+	color: #18ab99;
+	font-weight: bold;
+}
+
+.response-failure-lbl {
+	width: 100%;
+	color: #e01358;
+	font-weight: bold;
+}
+
+.action-btn-holder {
+    width: 100%;
+    padding: 0 20%;
+}
+
+.action-btn {
+	width: 80%;
+	margin: 10px 0;
+	padding:10px 0;
+	text-align: center;
+	background-color: #18ab99;
+	color:#fff;
+	font-size: 1em;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
